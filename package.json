@@ -1,0 +1,37 @@
+{
+  "name": "dothat",
+  "version": "0.1.0",
+  "description": "Promised Based DSL manager",
+  "main": "index.js",
+  "scripts": {
+    "test": "promises-aplus-tests test/my-adapter",
+    "build": "browserify index.js -s Dothat --detect-globals false  > dist/dothat.js ",
+    "build-min": "browserify index.js -s Dothat --detect-globals false | uglifyjs -m  > dist/dothat.min.js "
+  },
+  "devDependencies": {
+    "babel-plugin-transform-es2015-modules-umd": "^6.18.0",
+    "babel-polyfill": "^6.20.0",
+    "babel-preset-env": "^1.1.5",
+    "babelify": "^7.3.0",
+    "eslint": "^3.15.0",
+    "eslint-plugin-import": "^2.2.0",
+    "promises-aplus-tests": "*"
+  },
+  "keywords": [
+    "promise-aplus",
+    "facade",
+    "DSL"
+  ],
+  "author": "Gilles Coomans",
+  "license": "MIT",
+  "dependencies": {
+    "asap": "^2.0.5"
+  },
+  "browserify": {
+    "transform": [
+      [
+        "babelify"
+      ]
+    ]
+  }
+}
