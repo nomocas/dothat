@@ -14,7 +14,7 @@ It's the little sister of [Babelute.js](https://github.com/nomocas/babelute).
 
 Lighweight (2.0 Ko minified gzipped) and so useful.
 
-It has to be seen through Domain Specific Multi-Modeling (DSMM) Approach, where every logical level from business domain to technologies domains are encouraged to be describe by DSLs.
+It has to be seen through Domain Specific Multi-Modeling (DSMM) Approach, where every logical level from business domain to technologies domains are encouraged to be described by DSLs.
 
 
 ## Usage
