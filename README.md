@@ -110,9 +110,6 @@ app(myApp)
 	});
 
 ```
-## Remarque on ES6 class extension
-
-You could use ES6 style of Classes definition but there willbe
 
 ## Licence
 
