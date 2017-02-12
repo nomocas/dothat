@@ -95,10 +95,10 @@ More serious :
 ```javascript
 const AppDSL = Dothat.extends(Dothat, {
 	login(email, pass){ 
-		return this.then(function(s, app){
+		return this.then((s, app) => {
 			return myClient.post(app.baseURI + '...', { email, pass })
 		})
-		.then(function(s, app){
+		.then((s, app) => {
 			app.loggedIn = true;
 			app.session.userId = s.userId;
 			app.session.token = s.token;
