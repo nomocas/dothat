@@ -16,7 +16,7 @@ Dothat is "Behaviour Oriented" and Babelute is "Fact Oriented".
 
 Lighweight (2.0 Ko minified gzipped) and so useful.
 
-It has to be seen through Domain Specific Multi-Modeling (DSMM) Approach, where every logical level from business domain to technologies domains are encouraged to be described by DSLs.
+It has to be seen through Domain Specific Multi-Modeling (DSMM) Approach, where every logical level from business domain to technological domains are encouraged to be described by DSLs.
 
 
 ## Usage
