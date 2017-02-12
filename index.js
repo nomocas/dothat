@@ -1,7 +1,8 @@
-const Dothat = require('./lib/dothat'),
-	PromiseExtension = require('nomocas-utils/lib/promise-log');
+import Dothat from './src/dothat';
+import PromiseExtension from 'nomocas-utils/lib/promise-log';
 
-Object.assign(Dothat.prototype, PromiseExtension);
+for (const i in PromiseExtension)
+	Dothat.prototype[i] = PromiseExtension[i];
 
 Dothat.prototype.logSubject = function(title) {
 	return this.then((s, subject) => {

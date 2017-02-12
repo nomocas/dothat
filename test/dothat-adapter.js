@@ -1,5 +1,5 @@
 var Promise = require('../dist/dothat.js').default;
-Promise.unhandledRejection = null
+Promise.unhandledRejection = null;
 module.exports = {
 	resolved: Promise.resolve,
 	rejected: Promise.reject,
@@ -12,4 +12,5 @@ module.exports = {
 		def.promise = p;
 		return def;
 	}
-}
+};
+

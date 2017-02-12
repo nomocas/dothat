@@ -4,9 +4,12 @@
   "description": "Promised Based DSL manager",
   "main": "index.js",
   "scripts": {
-    "test": "promises-aplus-tests test/my-adapter",
+    "pretest": "npm run build && npm run build-min",
+    "test": "promises-aplus-tests test/dothat-adapter",
+    "prebuild": "eslint src test",
     "build": "browserify index.js -s Dothat --detect-globals false  > dist/dothat.js ",
-    "build-min": "browserify index.js -s Dothat --detect-globals false | uglifyjs -m  > dist/dothat.min.js "
+    "build-min": "browserify index.js -s Dothat --detect-globals false | uglifyjs -m  > dist/dothat.min.js ",
+    "prepublish": "NODE_ENV=production npm test"
   },
   "devDependencies": {
     "babel-plugin-transform-es2015-modules-umd": "^6.18.0",
@@ -14,8 +17,12 @@
     "babel-preset-env": "^1.1.5",
     "babelify": "^7.3.0",
     "eslint": "^3.15.0",
+    "eslint-config-es5": "^0.5.0",
+    "eslint-plugin-chai-expect": "^1.1.1",
     "eslint-plugin-import": "^2.2.0",
-    "promises-aplus-tests": "*"
+    "eslint-plugin-mocha": "^4.8.0",
+    "promises-aplus-tests": "*",
+    "uglifyjs": "^2.4.10"
   },
   "keywords": [
     "promise-aplus",

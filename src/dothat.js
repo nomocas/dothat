@@ -8,56 +8,10 @@
  * It's aimed to be used as base class for Facade-with-Method-Chaining DSL where there is (potential) async management while execution.
  * 
  * The second argument is the subject behind the facade.
- * 
- * @example
- * // simple example of direct Dothat prototype extension
- * Dothat.prototype.myMethod = function(arg1, arg2, ...){
- * 		return this.then(function(success, subject){
- * 			// do wathever you want with arg1, arg2, ... and success (the Promise piped value)
- * 			// on subject
- * 		});
- * };
- *
- * Dothat.resolve("my first success", mySubject)
- * .myMethod(true, "arg2_value", ...)
- * .then(...)
- *
- * @example
- * // Dothat derivated class
- * var MyDSL = Dothat.extends(Dothat, {
- * 		myMethod : function(arg1, arg2, ...){
- * 			return this.then(function(success, subject){
- * 				// do wathever you want with arg1, arg2, ... and success (the Promise piped value)
- * 			 	// on subject
- * 		   	});
- *       }
- * });
- *
- * MyDSL.resolve("my first success", mySubject)
- * .myMethod(true, ...) 
- * .then(...)
- *
- * MyExtendedDSL = Dothat.extends(MyDSL, ...);
- * ...
- *
- * @example
- *
- * const MyDSL = Dothat.extends(Dothat, {
- * 	myLexem:function(myArg){
- * 		return this.then(function(s, subject){
- * 			return s + myArg;
- * 		});
- * 	}
- * });
- * var mydsl = function(subject, s = null){
- * 	return MyDSL.resolve(s, subject);
- * }
- * mydsl(mySubject, 1).myLexem(2).log('result');
- * 
  */
 
-const asap = require('asap/raw');
-const assert = require('assert'); // removable with unassert
+import asap from 'asap/raw';
+import assert from 'assert'; // removable with unassert
 
 const PENDING = 1,
 	FULFILLED = 2,
