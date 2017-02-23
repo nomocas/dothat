@@ -2,7 +2,7 @@
 # Dothat.js
 
 [![npm](https://img.shields.io/npm/v/dothat.svg)]()
-[![npm-downloads](https://img.shields.io/npm/dt/dothat.svg)]()
+[![npm-downloads](https://img.shields.io/npm/dm/dothat.svg)]()
 [![licence](https://img.shields.io/npm/l/dothat.svg)]()
 [![dependecies](https://img.shields.io/david/nomocas/dothat.svg)]()
 [![dev-dependencies](https://img.shields.io/david/dev/nomocas/dothat.svg)]()
