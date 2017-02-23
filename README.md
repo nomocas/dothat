@@ -22,9 +22,6 @@ Dothat is "Behaviour Oriented" and Babelute is "Fact Oriented".
 
 Lighweight (2.0 Ko minified gzipped) and so useful.
 
-It has to be seen through Domain Specific Multi-Modeling (DSMM) Approach, where every logical level from business domain to technological domains are encouraged to be described by DSLs.
-
-
 ## Usage
 
 First of all, a Dothat is just like a Promise A+ (in fact it is a Promise A+ with just a second argument that is forwarded in each then/catch). So everywhere the program accepts a Promise, it accepts a Dothat.
@@ -76,7 +73,7 @@ MyDSL.resolve("my first success", mySubject)
 MyExtendedDSL = Dothat.extends(MyDSL, /*...*/);
 //...
 ```
-__Remarque__ : you could use ES6 class extension syntax, but by using MyDSL.extends you receive in addition 3 static methods (resolve, reject and extends) binded to needed Class that are useful. So keep that in mind if you use ES6 class syntax. Whatever, keep thing simple... ;)
+__Remarque__ : you could use ES6 class extension syntax, but by using MyDSL.extends you receive in addition 2 static methods (resolve, reject) binded to needed Class that are useful. So keep that in mind if you use ES6 class syntax. Whatever, keep thing simple... ;)
 
 Little sugar : 
 ```javascript
