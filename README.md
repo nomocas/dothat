@@ -1,6 +1,12 @@
 <a href="https://promisesaplus.com/"><img src="https://promisesaplus.com/assets/logo-small.png" align="right" /></a>
 # Dothat.js
 
+[![npm](https://img.shields.io/npm/v/dothat.svg)]()
+[![npm-downloads](https://img.shields.io/npm/dt/dothat.svg)]()
+[![licence](https://img.shields.io/npm/l/dothat.svg)]()
+[![dependecies](https://img.shields.io/david/nomocas/dothat.svg)]()
+[![dev-dependencies](https://img.shields.io/david/dev/nomocas/dothat.svg)]()
+
 Promise-Based Behavioural Facade DSL tools.
 
 - Extendable Promise A+ compliant base Class
