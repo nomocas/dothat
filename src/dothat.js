@@ -17,9 +17,10 @@ const PENDING = 1,
 	FULFILLED = 2,
 	REJECTED = 3;
 
+/* istanbul ignore next */
 function noop() {}
 
-export default class Dothat {
+class Dothat {
 
 	constructor(resolver, subject /* Dothat addition : link subject to Promise */ ) {
 
@@ -31,11 +32,7 @@ export default class Dothat {
 		this._subject = subject; // Dothat addition : storing locally the subject
 		this._handled = false; // eventual unhandle rejection flag
 		if (resolver !== noop)
-			resolver((value) => {
-				fulfill(this, value);
-			}, (reason) => {
-				doReject(this, reason);
-			});
+			resolver((value) => fulfill(this, value), (reason) => doReject(this, reason));
 	}
 
 	then(onResolve, onReject) {
@@ -64,29 +61,22 @@ export default class Dothat {
 
 	// Dothat addition : inline .all and .race method (useful because facade)
 	all(arr) {
-		return this.then(() => {
-			return Promise.all(arr);
-		});
+		return this.then(() => Promise.all(arr));
 	}
 
 	race(arr) {
-		return this.then(() => {
-			return Promise.race(arr);
-		});
+		return this.then(() => Promise.race(arr));
 	}
 
 	static resolve(value, subject /* dothat addition : resolve with subject to link */ ) {
-		return new Dothat((resolve) => {
-			resolve(value);
-		}, subject);
+		return new Dothat((resolve) => resolve(value), subject);
 	}
 
 	static reject(reason, subject /* dothat addition : reject with subject to link */ ) {
-		return new Dothat((resolve, reject) => {
-			reject(reason);
-		}, subject);
+		return new Dothat((resolve, reject) => reject(reason), subject);
 	}
 
+	/* istanbul ignore next */
 	static unhandledRejection(reason) {
 		if (typeof console !== 'undefined' && console)
 			console.warn('Possible Unhandled Dothat Rejection:', reason); // eslint-disable-line no-console
@@ -193,3 +183,5 @@ function execAndForward(parent, handler, p) {
 		fulfill(p, r);
 	});
 }
+
+export default Dothat;
