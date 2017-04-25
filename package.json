@@ -1,7 +1,7 @@
 {
-  "name": "es6-rb-mc-k-i-boilerplate",
-  "version": "0.1.0",
-  "description": "Full ES6 module boilerplate with rollup/babel and mocha/chai/karma/istanbul",
+  "name": "dothat",
+  "version": "0.3.0",
+  "description": "Promised Based DSL manager",
   "main": "dist/bundles/index.js",
   "module": "dist/bundles/index.mjs",
   "jsnext:main": "dist/bundles/index.mjs",
@@ -28,13 +28,20 @@
     "instrument": false
   },
   "keywords": [
-    "es6",
-    "boilerplate",
-    "test",
-    "coverage"
+    "promise-aplus",
+    "facade",
+    "DSL"
   ],
   "author": "Gilles Coomans",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nomocas/dothat.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nomocas/dothat/issues"
+  },
+  "homepage": "https://github.com/nomocas/dothat#readme",
   "dependencies": {
     "asap": "^2.0.5",
     "nomocas-utils": "^0.3.1"
@@ -70,3 +77,4 @@
     "uglify-js": "^2.7.5"
   }
 }
+
