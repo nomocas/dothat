@@ -1,4 +1,4 @@
-import Dothat from './src/dothat';
+import Dothat from './dothat';
 import promiseExtension from 'nomocas-utils/lib/promise-log';
 
 promiseExtension(Dothat);
