@@ -1,11 +1,11 @@
-var Promise = require('../dist/dothat.js').default;
+import Promise from '../src/dothat.js';
 Promise.unhandledRejection = null;
-module.exports = {
+export default {
 	resolved: Promise.resolve,
 	rejected: Promise.reject,
-	deferred: function() {
-		var def = {},
-			p = new Promise(function(resolve, reject) {
+	deferred() {
+		const def = {},
+			p = new Promise((resolve, reject) => {
 				def.resolve = resolve;
 				def.reject = reject;
 			});

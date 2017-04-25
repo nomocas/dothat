@@ -1,29 +1,6 @@
 {
     "root": true,
-    "rules": {
-        "indent": [ 2, "tab", { "SwitchCase": 1 } ],
-        "semi": [ 2, "always" ],
-        "keyword-spacing": [ 2, { "before": true, "after": true } ],
-        "space-before-blocks": [ 2, "always" ],
-        "space-before-function-paren": [ 0, "never" ],
-        "no-mixed-spaces-and-tabs": [ 2, "smart-tabs" ],
-        "no-cond-assign": 0,
-        "no-unused-vars": 2,
-        "object-shorthand":  [ 2, "always" ],
-        "no-const-assign": 2,
-        "no-class-assign": 2,
-        "no-this-before-super": 2,
-        "no-var": 2,
-        "no-console": 2,
-        "no-unreachable": 2,
-        "valid-typeof": 2,
-        "quote-props": [ 2, "as-needed" ],
-        "one-var": [ 0, "never" ],
-        "prefer-arrow-callback": 2,
-        "prefer-const": [ 2, { "destructuring": "all" } ],
-        "arrow-spacing": 2
-    },
-    "env": {
+	"env": {
         "es6": true,
         "browser": true,
         "node": true
@@ -35,11 +12,27 @@
     ],
     "parserOptions": {
         "ecmaVersion": 6,
-        "sourceType": "module"
+        "sourceType": "module",
+        "ecmaFeatures": {
+        }
     },
-    "settings": {
-        "import/ignore": [ 0, [
-            "\\.path.js$"
-        ] ]
+    "rules":{
+        "indent": [ 2, "tab", { "SwitchCase": 1 } ],
+        "semi": [ 2, "always" ],
+        "prefer-const": [ 2, { "destructuring": "all" } ],
+        "object-shorthand":  [ 2, "always" ],
+        "keyword-spacing": [ 2, { "before": true, "after": true } ],
+        "space-before-blocks": [ 2, "always" ],
+        "space-before-function-paren": [ 0, "never" ],
+        "no-mixed-spaces-and-tabs": [ 2, "smart-tabs" ],
+        "no-unused-vars": 2,
+        "no-unreachable": 2,
+        "valid-typeof": 2,
+        "prefer-arrow-callback": 2,
+        "arrow-spacing": 2,
+        "one-var": [ 0, "never" ],
+        "no-this-before-super": 2,
+        "quote-props": [ 2, "as-needed" ],
+        "no-var":2
     }
 }
