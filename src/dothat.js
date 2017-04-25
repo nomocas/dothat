@@ -99,8 +99,8 @@ export default class Dothat {
 		};
 		Cl.prototype = Object.create(BaseClass.prototype);
 		Cl.prototype.constructor = Cl;
-		Cl.resolve = Dothat.resolve;
-		Cl.reject = Dothat.reject;
+		Cl.resolve = (value, subject) => new Cl((resolve) => resolve(value), subject);
+		Cl.reject = (reason, subject) => new Cl((resolve, reject) => reject(reason), subject);
 		
 		if (methods)
 			Object.assign(Cl.prototype, methods);
