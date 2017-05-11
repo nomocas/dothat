@@ -18,6 +18,8 @@
     "cover": "cross-env NODE_ENV=test nyc --reporter=lcov --reporter=text mocha test/*.js",
     "coveralls": "npm run cover && cat ./coverage/lcov.info | coveralls",
     "prepublish": "npm test",
+    "precommit": "npm run prebuild",
+    "prepush": "npm test",
     "commitmsg": "validate-commit-msg",
     "release": "standard-version"
   },
@@ -80,3 +82,4 @@
     "validate-commit-msg": "^2.12.1"
   }
 }
+
